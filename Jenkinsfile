@@ -17,7 +17,6 @@ pipeline {
       steps {
         container('docker') {  
           sh "docker build -t mohamedji/test-app:dev ."  // when we run docker in this step, we're running it via a shell on the docker build-pod container, 
-          sh "docker push mohamedji/test-app:dev"        // which is just connecting to the host docker deaemon
         }
       }
     }
